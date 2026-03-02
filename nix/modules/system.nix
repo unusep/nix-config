@@ -50,6 +50,7 @@
       upgrade = false;
     };
     casks = [
+      "crossover"
       "docker"
       "google-chrome"
       "karabiner-elements"
