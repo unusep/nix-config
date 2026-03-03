@@ -16,7 +16,7 @@
       enabled = true;
       quickTapTermMs = 150;
       requirePriorIdleMs = 150;
-      bilateralFiltering = true;
+      bilateralFiltering = false;
       holdTriggerOnRelease = false;
       keyBindings = [
         {

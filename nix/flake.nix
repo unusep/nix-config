@@ -35,7 +35,7 @@
               ./modules/programs/editor.nix
               ./modules/programs/claude-code.nix
               ./modules/programs/aerospace.nix
-              ./modules/programs/zellij.nix
+              ./modules/programs/cmux.nix
               ./modules/programs/ghostty.nix
               ./modules/programs/karabiner.nix
               ./modules/programs/hrm.nix

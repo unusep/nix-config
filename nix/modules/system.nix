@@ -13,9 +13,7 @@
     vim
     git
     curl
-    zellij
     aerospace
-    ghostty-bin
     vscode
   ];
 
@@ -26,7 +24,7 @@
       orientation = "left";
       persistent-apps = [
         "/Applications/Google Chrome.app"
-        "/Applications/Nix Apps/Ghostty.app"
+        "/Applications/cmux.app"
         "/System/Applications/Messages.app"
       ];
     };
@@ -54,9 +52,11 @@
       upgrade = false;
     };
     taps = [
+      "manaflow-ai/cmux"
       "wontaeyang/hrm"
     ];
     casks = [
+      "cmux"
       "claude"
       "crossover"
       "docker"

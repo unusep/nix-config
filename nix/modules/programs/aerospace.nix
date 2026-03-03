@@ -13,7 +13,7 @@
 
       on-window-detected = [
         {
-          "if".app-id = "com.mitchellh.ghostty";
+          "if".app-id = "dev.cmux.app";
           run = "move-node-to-workspace T";
         }
         {

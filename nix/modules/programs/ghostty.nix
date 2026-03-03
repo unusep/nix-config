@@ -3,7 +3,7 @@
     force = true;
     text = ''
       font-family = JetBrains Mono
-      font-size = 18
+      font-size = 13
     '';
   };
 }
