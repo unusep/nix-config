@@ -8,7 +8,7 @@ let
     ''{"key":"${key}","command":${boolStr cmd},"shift":${boolStr shift},"option":${boolStr option},"control":${boolStr ctrl}}'';
 
   keybindings = {
-    "shortcut.toggleSidebar"     = mkShortcut { key = "b"; cmd = true; };
+    "shortcut.toggleSidebar"     = mkShortcut { key = "s"; cmd = true; };
     "shortcut.newTab"            = mkShortcut { key = "n"; cmd = true; };
     "shortcut.newWindow"         = mkShortcut { key = "n"; cmd = true; shift = true; };
     "shortcut.closeWindow"       = mkShortcut { key = "w"; cmd = true; ctrl = true; };

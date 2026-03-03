@@ -23,7 +23,7 @@
       show-recents = false;
       orientation = "left";
       persistent-apps = [
-        "/Applications/Google Chrome.app"
+        "/Applications/Zen.app"
         "/Applications/cmux.app"
         "/System/Applications/Messages.app"
       ];
@@ -61,6 +61,7 @@
       "crossover"
       "docker"
       "google-chrome"
+      "zen"
       "hrm"
       "karabiner-elements"
       "raycast"
