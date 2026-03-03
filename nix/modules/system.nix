@@ -43,6 +43,10 @@
 
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  environment.etc."sudoers.d/darwin-rebuild".text = ''
+    ${user} ALL=(root) NOPASSWD: /run/current-system/sw/bin/darwin-rebuild
+  '';
+
   homebrew = {
     enable = true;
     onActivation = {
@@ -50,6 +54,7 @@
       upgrade = false;
     };
     casks = [
+      "claude"
       "crossover"
       "docker"
       "google-chrome"
@@ -58,33 +63,6 @@
       "zoom"
       "obs"
     ];
-  };
-
-  launchd.daemons.nix-auto-update = {
-    serviceConfig = {
-      Label = "org.nix.auto-update";
-      EnvironmentVariables = {
-        PATH = "/run/current-system/sw/bin:/nix/var/nix/profiles/default/bin:/usr/bin:/bin";
-      };
-      ProgramArguments = [
-        "/bin/sh" "-c"
-        ''
-          FLAKE_DIR="/Users/${user}/.config/nix"
-
-          if ! curl -s --max-time 5 https://cache.nixos.org > /dev/null 2>&1; then
-            echo "No network, skipping update"
-            exit 0
-          fi
-
-          cd "$FLAKE_DIR"
-          nix flake update 2>&1
-          darwin-rebuild switch --flake "$FLAKE_DIR" 2>&1
-        ''
-      ];
-      StartCalendarInterval = [{ Hour = 4; Minute = 0; }];
-      StandardOutPath = "/tmp/nix-auto-update.log";
-      StandardErrorPath = "/tmp/nix-auto-update.log";
-    };
   };
 
   system.configurationRevision = self.rev or self.dirtyRev or null;

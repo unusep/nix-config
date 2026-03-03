@@ -11,6 +11,7 @@
       ls = "eza --icons";
       ll = "eza -l --icons --git -a";
       v = "nvim";
+      drs = "sudo darwin-rebuild switch --flake ~/.config/nix";
     };
     initContent = ''
       bindkey -v
