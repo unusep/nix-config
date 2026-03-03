@@ -17,7 +17,7 @@
           run = "move-node-to-workspace T";
         }
         {
-          "if".app-id = "app.zen-browser.zen";
+          "if".app-id = "company.thebrowser.Browser";
           run = "move-node-to-workspace B";
         }
         {

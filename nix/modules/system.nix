@@ -23,7 +23,7 @@
       show-recents = false;
       orientation = "left";
       persistent-apps = [
-        "/Applications/Zen.app"
+        "/Applications/Arc.app"
         "/Applications/cmux.app"
         "/System/Applications/Messages.app"
       ];
@@ -60,8 +60,7 @@
       "claude"
       "crossover"
       "docker"
-      "google-chrome"
-      "zen"
+      "arc"
       "hrm"
       "karabiner-elements"
       "raycast"
