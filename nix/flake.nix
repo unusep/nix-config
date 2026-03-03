@@ -38,6 +38,7 @@
               ./modules/programs/zellij.nix
               ./modules/programs/ghostty.nix
               ./modules/programs/karabiner.nix
+              ./modules/programs/hrm.nix
               ./modules/programs/git.nix
               ./modules/programs/gh.nix
             ];

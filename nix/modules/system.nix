@@ -53,11 +53,15 @@
       cleanup = "none";
       upgrade = false;
     };
+    taps = [
+      "wontaeyang/hrm"
+    ];
     casks = [
       "claude"
       "crossover"
       "docker"
       "google-chrome"
+      "hrm"
       "karabiner-elements"
       "raycast"
       "zoom"

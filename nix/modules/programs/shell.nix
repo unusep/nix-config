@@ -4,7 +4,7 @@
     enableCompletion = true;
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "sudo" "docker" "kubectl" "vi-mode" ];
+      plugins = [ "git" "sudo" "vi-mode" ];
       theme = "robbyrussell";
     };
     shellAliases = {
