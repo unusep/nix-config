@@ -8,9 +8,11 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     claude-code.url = "github:sadjow/claude-code-nix";
+    rust-overlay.url = "github:oxalica/rust-overlay";
+    rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, claude-code, ... }:
+  outputs = inputs@{ self, nixpkgs, nix-darwin, home-manager, claude-code, rust-overlay, ... }:
   let
     user = "deshuncai";
     hostname = "Deshuns-MacBook-Pro";
@@ -20,7 +22,7 @@
       inherit system;
       specialArgs = { inherit user hostname self; };
       modules = [
-        { nixpkgs.overlays = [ claude-code.overlays.default ]; }
+        { nixpkgs.overlays = [ claude-code.overlays.default rust-overlay.overlays.default ]; }
         ./modules/system.nix
 
         home-manager.darwinModules.home-manager
@@ -38,6 +40,7 @@
               ./modules/programs/cmux.nix
               ./modules/programs/ghostty.nix
               ./modules/programs/karabiner.nix
+
               ./modules/programs/hrm.nix
               ./modules/programs/git.nix
               ./modules/programs/gh.nix

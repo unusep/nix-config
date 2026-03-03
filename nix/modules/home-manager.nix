@@ -42,12 +42,15 @@
     bun
     python313
 
-    cargo
-    rustc
-    rust-analyzer
-    rustfmt
-    clippy
+    (rust-bin.nightly.latest.default.override {
+      extensions = [ "rust-src" "rust-analyzer" ];
+    })
 
     cmake
+    rust-script
+
+    statix
+    deadnix
+    nixfmt-rfc-style
   ];
 }
