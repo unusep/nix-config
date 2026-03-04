@@ -23,11 +23,4 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   group = vim.api.nvim_create_augroup("file_change_check", { clear = true }),
 })
 
--- Disable diagnostics for markdown files
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function(args)
-    vim.diagnostic.disable(args.buf)
-  end,
-  group = vim.api.nvim_create_augroup("markdown_no_diag", { clear = true }),
-})
+vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")

@@ -36,6 +36,7 @@
               ./modules/programs/shell.nix
               ./modules/programs/editor.nix
               ./modules/programs/claude-code.nix
+              ./modules/programs/claude-tmux-bridge.nix
               ./modules/programs/aerospace.nix
               ./modules/programs/cmux.nix
               ./modules/programs/ghostty.nix
