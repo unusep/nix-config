@@ -23,7 +23,6 @@ __pycache__/
 
 # Rust
 target/
-Cargo.lock
 
 # Nix build output
 nix/result

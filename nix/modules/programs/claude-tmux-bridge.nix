@@ -1,12 +1,10 @@
 { pkgs, ... }:
 let
-  tmuxBridge = pkgs.stdenv.mkDerivation {
-    name = "claude-tmux-bridge";
-    src = ../../pkgs/claude-tmux-bridge.rs;
-    nativeBuildInputs = [ pkgs.rustc ];
-    dontUnpack = true;
-    buildPhase = "rustc -O -o tmux $src";
-    installPhase = "mkdir -p $out/bin && cp tmux $out/bin/";
+  tmuxBridge = pkgs.rustPlatform.buildRustPackage {
+    pname = "claude-tmux-bridge";
+    version = "0.1.0";
+    src = ../../pkgs/claude-tmux-bridge;
+    cargoLock.lockFile = ../../pkgs/claude-tmux-bridge/Cargo.lock;
   };
 
   cct = pkgs.writeShellScriptBin "cct" ''
