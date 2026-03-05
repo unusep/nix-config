@@ -48,8 +48,8 @@
   homebrew = {
     enable = true;
     onActivation = {
-      cleanup = "none";
-      upgrade = false;
+      cleanup = "uninstall";
+      upgrade = true;
     };
     taps = [
       "manaflow-ai/cmux"
