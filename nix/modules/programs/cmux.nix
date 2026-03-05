@@ -76,6 +76,7 @@ in {
     ${writeString "socketControlMode" "automation"}
     ${writeString "newWorkspacePlacement" "end"}
     ${writeInt "browserOpenSidebarPullRequestLinksInCmuxBrowser" 0}
+    ${writeInt "browserOpenTerminalLinksInCmuxBrowser" 0}
     ${writeInt "workspaceAutoReorderOnNotification" 0}
   '';
 }
