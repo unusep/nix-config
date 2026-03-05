@@ -45,9 +45,6 @@ raycast/
 # GitHub CLI (hosts.yml may contain tokens)
 gh/hosts.yml
 
-# Neomutt account (contains personal email)
-neomutt/account
-
 # Auto-generated configs
 configstore/
 cagent/

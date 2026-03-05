@@ -45,7 +45,7 @@
               ./modules/programs/hrm.nix
               ./modules/programs/git.nix
               ./modules/programs/gh.nix
-              ./modules/programs/mail.nix
+
             ];
           };
         }
