@@ -25,6 +25,9 @@ __pycache__/
 target/
 Cargo.lock
 
+# Nix build output
+nix/result
+
 # IDE
 .vscode/
 .idea/
