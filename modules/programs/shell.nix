@@ -12,7 +12,7 @@
       ll = "eza -l --icons --git -a";
       v = "nvim";
       cc = "claude";
-      drs = "sudo darwin-rebuild switch --flake ~/nix-config";
+      nix-up = "nix flake update ~/nix-config && sudo darwin-rebuild switch --flake ~/nix-config";
     };
     initContent = ''
       bindkey -v
