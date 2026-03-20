@@ -18,6 +18,7 @@
         "cmux@local" = true;
       };
       promptSuggestionEnabled = false;
+      voiceEnabled = true;
       attribution = {
         commit = "";
         pr = "";

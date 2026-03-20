@@ -17,7 +17,7 @@
             exit 0
           fi
 
-          cd /Users/${user}/nix-config/nix
+          cd /Users/${user}/nix-config
           nix flake update 2>&1
         ''
       ];

@@ -6,5 +6,5 @@
     vimAlias = true;
   };
 
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "/Users/deshuncai/nix-config/nix/nvim";
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "/Users/deshuncai/nix-config/nvim";
 }
