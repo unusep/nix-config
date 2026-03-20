@@ -18,6 +18,7 @@
   ];
 
   system.defaults = {
+    controlcenter.Bluetooth = true;
     dock = {
       autohide = true;
       show-recents = false;
@@ -66,6 +67,8 @@
       "raycast"
       "zoom"
       "obs"
+      "steam"
+      "discord"
     ];
   };
 

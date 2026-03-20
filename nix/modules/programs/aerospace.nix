@@ -32,6 +32,14 @@
           "if".app-id = "com.obsproject.obs-studio";
           run = "move-node-to-workspace O";
         }
+        {
+          "if".app-id = "com.hnc.Discord";
+          run = "move-node-to-workspace D";
+        }
+        {
+          "if".app-id = "com.valvesoftware.steam";
+          run = ["layout floating" "move-node-to-workspace S"];
+        }
       ];
 
       mode.main.binding = {
