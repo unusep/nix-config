@@ -50,6 +50,7 @@ gh/hosts.yml
 # Auto-generated configs
 configstore/
 cagent/
+gcloud/
 karabiner/automatic_backups/
 
 # Nix-managed symlinks (actual config lives in flake)

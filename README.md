@@ -11,15 +11,9 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 ### 2. Clone and apply the configuration
 ```bash
-# Clone into a temporary location
-git clone https://github.com/unusep/dotfiles.git ~/dotfiles-temp
-cd ~/dotfiles-temp
-
-# Apply nix-darwin configuration (requires sudo)
+git clone https://github.com/unusep/dotfiles.git ~/nix-config
+cd ~/nix-config/nix
 sudo nix run nix-darwin -- switch --flake .
-
-# Copy this .config to your home directory
-cp -r . ~/.config/
 ```
 
 ### 3. Install Neovim plugins
@@ -37,13 +31,10 @@ nvim --headless "+Lazy! sync" +qa
   - Keyboard remapping (Karabiner)
   - Shell configuration (Zsh)
 
-- **nvim/** - Neovim configuration
+- **nix/nvim/** - Neovim configuration
   - LazyVim starter with custom plugins
   - LSP setup with Mason
   - Language support: Rust, TypeScript, Python, Go
-
-- **karabiner/** - Keyboard remapping config
-- **zellij/** - Terminal multiplexer config
 
 ## Manual Setup Items (not in git)
 
@@ -59,11 +50,11 @@ Copy these manually if needed.
 # 1. Install Nix
 curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
-# 2. Clone this config into ~/.config
-git clone https://github.com/unusep/dotfiles.git ~/.config
+# 2. Clone this config
+git clone https://github.com/unusep/dotfiles.git ~/nix-config
 
 # 3. Apply the configuration (requires sudo)
-cd ~/.config && sudo nix run nix-darwin -- switch --flake .
+cd ~/nix-config/nix && sudo nix run nix-darwin -- switch --flake .
 
 # 4. Reload shell
 exec $SHELL
@@ -74,4 +65,3 @@ exec $SHELL
 - The `flake.lock` file pins exact dependency versions for reproducibility
 - Some configs (Karabiner, Zellij, Aerospace) are defined in `nix/flake.nix` as Nix modules
 - Neovim plugins are managed by LazyVim/lazy.nvim (not committed to git)
-- See individual directories for specific configuration details
