@@ -18,6 +18,4 @@ in
   home.packages = [ cct tmuxBridge ];
 
   programs.zsh.shellAliases.claude = "cct";
-
-  programs.claude-code.settings.env.CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS = "1";
 }
