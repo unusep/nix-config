@@ -37,7 +37,7 @@
           run = "move-node-to-workspace D";
         }
         {
-          "if".app-id = "com.valvesoftware.steam";
+          "if".app-id = "com.valvesoftware.steam.helper";
           run = ["layout floating" "move-node-to-workspace S"];
         }
       ];
