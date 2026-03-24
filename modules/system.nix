@@ -23,6 +23,7 @@
       autohide = true;
       show-recents = false;
       orientation = "left";
+      wvous-br-corner = 1;
       persistent-apps = [
         "/Applications/Arc.app"
         "/Applications/cmux.app"

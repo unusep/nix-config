@@ -13,6 +13,7 @@
       v = "nvim";
       cc = "claude";
       nix-up = "nix flake update ~/nix-config && sudo darwin-rebuild switch --flake ~/nix-config";
+      nup = "nix-up";
     };
     initContent = ''
       bindkey -v
