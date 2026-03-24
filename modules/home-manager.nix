@@ -35,7 +35,6 @@
     bat
     fzf
     zoxide
-    direnv
     lazygit
 
     nodejs

@@ -56,6 +56,9 @@
       "manaflow-ai/cmux"
       "wontaeyang/hrm"
     ];
+    brews = [
+      "direnv"
+    ];
     casks = [
       "cmux"
       "claude"
