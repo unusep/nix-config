@@ -62,8 +62,7 @@
     casks = [
       "cmux"
       "claude"
-      "crossover"
-      "docker"
+"docker"
       "arc"
       "hrm"
       "karabiner-elements"

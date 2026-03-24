@@ -38,7 +38,7 @@
         }
         {
           "if".app-id = "com.valvesoftware.steam.helper";
-          run = ["layout floating" "move-node-to-workspace S"];
+          run = ["move-node-to-workspace S" "layout floating"];
         }
       ];
 
